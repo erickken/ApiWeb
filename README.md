@@ -1,41 +1,115 @@
-# React + TypeScript + Vite
+📝 Descrição
+Aplicação web desenvolvida para o desafio técnico de Desenvolvedor(a) Júnior Frontend. Consome uma API pública para exibir uma listagem de usuários com funcionalidades de paginação, busca e visualização de detalhes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Funcionalidades
+Listagem paginada de usuários (6 por página)
 
-Currently, two official plugins are available:
+Visualização de detalhes do usuário em rota separada
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Filtro de busca por nome (processamento local)
 
-## Expanding the ESLint configuration
+Layout responsivo para mobile e desktop
+
+Indicador de carregamento durante requisições
+
+🛠️ Tecnologias Utilizadas
+⚡ Vite (React + TypeScript)
+
+🎨 TailwindCSS (estilização)
+
+🚦 React Router DOM (navegação)
+
+🔄 Context API (gerenciamento de estado)
+
+📦 Axios (requisições HTTP)
+
+▶️ Como Executar
+Pré-requisitos
+Node.js (v18+)
+
+npm (v9+) ou yarn
+
+Instalação
+bash
+# Clone o repositório
+git clone https://github.com/erickken/ApiWeb.git
+
+# Acesse a pasta do projeto
+cd paciente360
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
+🕒 Tempo de Desenvolvimento
+Tempo estimado: 3 horas
+
+Configuração inicial: 30 minutos
+
+Implementação das funcionalidades: 2 horas
+
+Ajustes de estilo e responsividade: 30 minutos
+
+📸 Demonstração
+UserDetails
+<img width="658" height="701" alt="image" src="https://github.com/user-attachments/assets/4cc52021-a50f-49c9-9a4d-e90988ef50c2" />
+
+UserList
+<img width="606" height="867" alt="image" src="https://github.com/user-attachments/assets/399359c8-8cf6-463f-8347-32e14b99ea14" />
 
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📚 Decisões Técnicas
+Estrutura de Pastas:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+text
+src/
+├── components/
+├── context/
+├── hooks/
+├── pages/
+├── services/
+└── types/
+Gerenciamento de Estado:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Optei por Context API por ser suficiente para a complexidade atual
+
+Criado um UserContext para compartilhar o estado da listagem
+
+Estilização:
+
+TailwindCSS para agilidade no desenvolvimento
+
+Media queries para responsividade
+
+API:
+
+Utilização da Random User API
+
+Implementado cache básico para evitar requisições repetidas
+
+✅ Requisitos Cumpridos
+Listagem paginada
+
+Tela de detalhes
+
+Filtro de busca
+
+Responsividade
+
+Código organizado e tipado
+
+🔍 Melhorias Futuras
+Implementar testes com Jest
+
+Adicionar skeleton loading
+
+Melhorar tratamento de erros
+
+Adicionar ordenação por colunas
+
+
+
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
